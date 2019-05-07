@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: cmm
+ * 客户端使用 learn.netty.example.first.thirdexample.MyChatClient
  * @Date: 19-4-23 下午11:31
  * @Version 1.0
  */

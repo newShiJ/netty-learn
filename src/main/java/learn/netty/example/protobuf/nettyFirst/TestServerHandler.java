@@ -8,10 +8,10 @@ import learn.netty.example.protobuf.first.DataInfo;
  * @author chenmingming
  * @date 2019/7/18
  */
-public class TestServerHandler extends SimpleChannelInboundHandler<DataInfo.Student> {
+public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, DataInfo.Student msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
         System.out.println(msg);
     }
 }

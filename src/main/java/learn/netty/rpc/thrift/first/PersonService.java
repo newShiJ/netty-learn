@@ -191,13 +191,14 @@ public class PersonService {
         prot.writeMessageEnd();
       }
 
-      public void getResult() throws DataException, org.apache.thrift.TException {
+      public Void getResult() throws DataException, org.apache.thrift.TException {
         if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
           throw new IllegalStateException("Method call not finished!");
         }
         org.apache.thrift.transport.TMemoryInputTransport memoryTransport = new org.apache.thrift.transport.TMemoryInputTransport(getFrameBuffer().array());
         org.apache.thrift.protocol.TProtocol prot = client.getProtocolFactory().getProtocol(memoryTransport);
         (new Client(prot)).recv_savePerson();
+        return null;
       }
     }
 

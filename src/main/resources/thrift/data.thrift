@@ -1,4 +1,5 @@
 namespace java learn.netty.rpc.thrift.first
+namespace py learn.netty.rpc.thrift.py
 
 typedef i16 short
 typedef i32 int

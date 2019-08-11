@@ -24,4 +24,11 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
         pipeline.addLast(new MyServerHandler());
     }
+
+    public static void main(String[] args) {
+        double a = 20000000000000.00;
+        long b = 1L << 34;
+        System.out.println(b);
+        System.out.println((int) b);
+    }
 }

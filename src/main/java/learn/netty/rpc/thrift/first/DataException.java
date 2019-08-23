@@ -42,7 +42,7 @@ public class DataException extends TException implements org.apache.thrift.TBase
   private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
   static {
     schemes.put(StandardScheme.class, new DataExceptionStandardSchemeFactory());
-    schemes.put(TupleScheme.class, new DataExceptionTupleSchemeFactory());
+//    schemes.put(TupleScheme.class, new DataExceptionTupleSchemeFactory());
   }
 
   public String message; // optional
@@ -534,7 +534,7 @@ public class DataException extends TException implements org.apache.thrift.TBase
 
   }
 
-  private static class DataExceptionTupleSchemeFactory implements SchemeFactory {
+  private static class elDataExceptionTupleSchemeFactory implements SchemeFactory {
     public DataExceptionTupleScheme getScheme() {
       return new DataExceptionTupleScheme();
     }

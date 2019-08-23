@@ -21,6 +21,8 @@ public class MyServer {
             serverBootstrap.group(bossGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new MyServerInitializer());
+            ChannelFuture channelFuture1 = serverBootstrap.bind(8080);
+                     channelFuture1.addListener(e -> System.out.println(">>>>"));
             ChannelFuture channelFuture = serverBootstrap.bind(8080).sync();
             channelFuture.channel().closeFuture().sync();
         }catch (Exception e){
